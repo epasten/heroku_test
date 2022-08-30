@@ -9,7 +9,9 @@ import hvplot.pandas
 from ipywidgets import widgets, interact, interactive, fixed, interact_manual
 from IPython.display import display
 
-raw_data_at = pd.read_csv('C:/Users/erpasten/Documents/UEF/PET/dataframes/df_raw_at.csv')
+url='https://github.com/epasten/heroku_test/raw/main/df_raw_at.csv'
+
+raw_data_at = pd.read_csv(url)
 
 raw_at = raw_data_at.rename(columns={'Unnamed: 0':'Days since 01/01/1971'})
 raw_at.plot(kind='scatter', x='Days since 01/01/1971', y='Penman', color='blue', grid=True, title='Daily Penman PET (mm/day)')
