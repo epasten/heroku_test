@@ -1,4 +1,3 @@
 panel
 hvplot
 ipywidgets
-IPython.display
